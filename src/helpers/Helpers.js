@@ -41,7 +41,6 @@ function NewTodo(dayId, title, id) {
     this.dayId = dayId
     this.title = title
     this.id = id
-    this.status = false
 }
 
 export {

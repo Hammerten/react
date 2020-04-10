@@ -5,7 +5,7 @@ import './App.css';
 function App() {
   return (
     <div className="main">
-      <Todos inputDivTitle="New Todo" listDivTitle="Library"/>
+      <Todos inputDivTitle="New Todo" listDivTitle="Todos"/>
     </div>
   );
 }
