@@ -1,0 +1,11 @@
+button {
+  min-width: 80px;
+}
+
+.navbar {
+  background-color: #8ec6c5;
+}
+
+.jumbotron {
+  padding: 2rem 2rem;
+}
