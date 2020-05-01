@@ -8,7 +8,7 @@ function Covid({
   covidDataByStates,
   covidDataByJhucsse,
 }) {
-  const [covidCountryLimit, setCovidCountryLimit] = useState(20);
+  const [covidLimit, setCovidLimit] = useState(20);
   const [covidApiIndex, setCovidApiIndex] = useState(0);
   const [covidSortBy, setCovidSortBy] = useState("cases");
   const [covidCountry, setCovidCountry] = useState("");
@@ -29,8 +29,8 @@ function Covid({
     handleSubmit();
   }, [covidApiIndex, covidDataByCountry]);
 
-  function covidCountryLimitHandler(e) {
-    setCovidCountryLimit(parseInt(e.target.value));
+  function covidLimitHandler(e) {
+    setCovidLimit(parseInt(e.target.value));
   }
 
   function handleSubmit() {
@@ -43,7 +43,7 @@ function Covid({
       let newData = apiList[covidApiIndex].sort(
         (a, b) => b[`${covidSortBy}`] - a[`${covidSortBy}`]
       );
-      newData = newData.slice(0, covidCountryLimit);
+      newData = newData.slice(0, covidLimit);
       setnewdbc(newData);
     }
   }
@@ -93,11 +93,11 @@ function Covid({
           {covidApiIndex !== 1 && (
             <>
               <input
-                value={covidCountryLimit}
+                value={covidLimit}
                 className="form-control"
                 type="number"
                 placeholder="Maximum results"
-                onChange={covidCountryLimitHandler}
+                onChange={covidLimitHandler}
               />
               <select
                 value={covidSortBy}
@@ -129,7 +129,7 @@ function Covid({
         </div>
         <div>
           <CovidTable
-            key={`${covidSortBy}-${covidCountryLimit}-${covidApiIndex}`}
+            key={`${covidSortBy}-${covidLimit}-${covidApiIndex}`}
             covidSortBy={covidSortBy}
             covidDataByCountry={newdbc}
             columns={columns[covidApiIndex]}
