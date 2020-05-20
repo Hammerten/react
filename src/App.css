@@ -8,6 +8,8 @@
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+  max-width: 500px;
+  padding: 3%;
 }
 
 .user-container {

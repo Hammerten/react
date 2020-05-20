@@ -19,10 +19,7 @@ function Login() {
   };
 
   return (
-    <div
-      className="login-container container border rounded"
-      style={{ padding: "3%", maxWidth: "25%" }}
-    >
+    <div className="login-container container border rounded">
       <h3 className="mb-4 text-center">Sign In</h3>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="form-group">

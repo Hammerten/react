@@ -19,10 +19,7 @@ function Register(props) {
 
   const { handleSubmit, register, errors } = useForm();
   return (
-    <div
-      className="login-container container border rounded"
-      style={{ padding: "3%", maxWidth: "25%" }}
-    >
+    <div className="login-container container border rounded">
       <h3 className="mb-4 text-center">Register</h3>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="form-group">
