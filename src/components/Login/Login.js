@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../../services/auth";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 
 function Login() {
   const { authenticate, isAuthenticated } = useContext(AuthContext);
@@ -62,9 +62,9 @@ function Login() {
           <button type="submit" className="btn btn-primary">
             Sign in
           </button>
-          <a className="float-right" href="/">
-            Register
-          </a>
+          <Link to="/register">
+            <span className="float-right">Register</span>
+          </Link>
         </div>
       </form>
     </div>

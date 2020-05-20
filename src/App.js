@@ -21,7 +21,7 @@ function App() {
           <PrivateRoute path="/update">
             <UpdateContainer />
           </PrivateRoute>
-          <PrivateRoute path="/">
+          <PrivateRoute exact path="/">
             <UserContainer />
           </PrivateRoute>
         </Switch>
