@@ -1,50 +1,32 @@
-import React, { useState, useEffect } from "react";
-import logo from "./logo.svg";
+import React from "react";
 import "./App.css";
-import Axios from "axios";
-import { apiUrl } from "./configure.json";
 import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
-
-const auth = {
-  isAuthenticated: false,
-  authenticate(user) {
-    Axios.post(`${apiUrl}login`, user)
-      .then((res) => {
-        auth.authenticated = true;
-        localStorage.setItem("token", res.data.token);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  },
-  register(user) {
-    Axios.post(`${apiUrl}register`, user).then((res) => {
-      console.log(res);
-    });
-  },
-};
+import UserContainer from "./containers/UserContainer";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import PrivateRoute from "./services/PrivateRoute";
+import UpdateContainer from "./containers/UpdateContainer";
 
 function App() {
-  const [authenticated, setAuthenticated] = useState(null);
-
-  function login(user) {
-    auth.authenticate(user);
-  }
-
-  function register(user) {
-    auth.register(user);
-  }
-
-  useEffect(() => {
-    setAuthenticated(auth.isAuthenticated);
-  }, [login]);
-
   return (
-    <div>
-      <Login login={login} />
-      <Register registerUser={register} />
-    </div>
+    <Router>
+      <div className="container">
+        <Switch>
+          <Route path="/login">
+            <Login />
+          </Route>
+          <Route path="/register">
+            <Register />
+          </Route>
+          <PrivateRoute path="/update">
+            <UpdateContainer />
+          </PrivateRoute>
+          <PrivateRoute path="/">
+            <UserContainer />
+          </PrivateRoute>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
