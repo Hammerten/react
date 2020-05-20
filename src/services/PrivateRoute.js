@@ -8,7 +8,7 @@ function PrivateRoute({ children, ...rest }) {
     <Route
       {...rest}
       render={({ location }) =>
-        auth.isAuthenticated !== "false" ? (
+        auth.isAuthenticated || auth.isAuthenticated !== false ? (
           children
         ) : (
           <Redirect to={{ pathname: "/login", state: { from: location } }} />
