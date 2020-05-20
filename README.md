@@ -9,7 +9,7 @@ npm required
 ```
 git clone
 cd midterm
-npm install
+yarn
 ```
 
 # Development
@@ -17,7 +17,7 @@ npm install
 The website can run locally by calling:
 
 ```
-npm start
+yarn start
 ```
 
 # Deployment
@@ -25,7 +25,7 @@ npm start
 Generate static build:
 
 ```
-npm react-scripts build
+yarn build
 ```
 
 ## IMPORTANT
