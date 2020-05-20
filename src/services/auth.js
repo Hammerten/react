@@ -3,13 +3,13 @@ import { apiUrl } from "../configure.json";
 import Axios from "axios";
 
 export const AuthContext = React.createContext({
-  isAuthenticated: false,
+  isAuthenticated: "false",
   authenticate(user) {},
   registerUser(user) {},
 });
 
 function AuthComponent(props) {
-  const prevAuth = window.localStorage.getItem("token") || false;
+  const prevAuth = window.localStorage.getItem("token") || "false";
   const [authenticated, setAuthenticated] = useState(prevAuth);
 
   useEffect(() => {
