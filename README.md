@@ -2,6 +2,9 @@
 
 Created for university class assignment.
 
+Demo: https://stoic-albattani-01b2ee.netlify.app
+API: https://reqres.in
+
 # Installation
 
 npm required
