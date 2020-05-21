@@ -6,6 +6,7 @@ export const AuthContext = React.createContext({
   isAuthenticated: "false",
   authenticate(user) {},
   registerUser(user) {},
+  logOut() {},
 });
 
 function AuthComponent(props) {
@@ -40,6 +41,11 @@ function AuthComponent(props) {
       });
   }
 
+  function logOutHandler() {
+    localStorage.setItem("token", "false");
+    setAuthenticated("false");
+  }
+
   return (
     <AuthContext.Provider
       value={{
@@ -49,6 +55,9 @@ function AuthComponent(props) {
         },
         registerUser(user) {
           registerHandler(user);
+        },
+        logOut() {
+          logOutHandler();
         },
       }}
     >

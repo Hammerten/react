@@ -17,7 +17,7 @@ function UserInput({ addUser }) {
   };
 
   return (
-    <div className="container mb-3" style={{ padding: "3%", maxWidth: "50%" }}>
+    <div className="container mb-4" style={{ padding: "3%", maxWidth: "50%" }}>
       <h3 className="mb-4 text-center">Create New User</h3>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="form-group">
