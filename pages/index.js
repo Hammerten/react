@@ -1,9 +1,10 @@
 import React from "react";
-import "./App.css";
-import CovidApi from "./containers/CovidApi";
-import Header from "./components/Header/Header";
+// import styles from "./App.css";
+import CovidApi from "../src/containers/CovidApi";
+import Header from "../src/components/Header/Header";
+// import App from "./_app";
 
-function App() {
+function MainPage() {
   return (
     <div>
       <Header
@@ -16,4 +17,4 @@ function App() {
   );
 }
 
-export default App;
+export default MainPage;

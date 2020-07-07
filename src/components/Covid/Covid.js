@@ -77,12 +77,12 @@ function Covid({
       </div>
       <div className="container">
         <div
-          style={{ justifyContent: "space-between", display: "flex" }}
-          className="mb-3"
+          className="container row mb-3"
+          style={{ justifyContent: "space-between" }}
         >
           <select
             value={covidApiIndex}
-            className="custom-select"
+            className="custom-select col-sm-12 col-md-3"
             onChange={covidApiIndexHandler}
           >
             <option value="0">Countries API</option>
@@ -94,7 +94,7 @@ function Covid({
             <>
               <input
                 value={covidLimit}
-                className="form-control"
+                className="form-control col-sm-12 col-md-3"
                 type="number"
                 placeholder="Maximum results"
                 onChange={covidLimitHandler}
@@ -102,7 +102,7 @@ function Covid({
               <select
                 value={covidSortBy}
                 onChange={covidSortByHandler}
-                className="custom-select"
+                className="custom-select col-sm-12 col-md-3"
               >
                 <option value="cases">Sort by cases</option>
                 <option value="deaths">Sort by deaths</option>
@@ -115,15 +115,18 @@ function Covid({
           )}
           {covidApiIndex === 1 && (
             <input
-              style={{ flexBasis: "60%" }}
               value={covidCountry}
-              className="form-control"
+              className="form-control col-sm-12 col-md-6"
               type="text"
               placeholder="Enter country"
               onChange={covidCountryHandler}
             />
           )}
-          <button onClick={handleSubmit} type="button" className="btn btn-dark">
+          <button
+            onClick={handleSubmit}
+            type="button"
+            className="btn btn-dark col-sm-12 col-md-1"
+          >
             Search
           </button>
         </div>
