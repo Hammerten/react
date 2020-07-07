@@ -30,4 +30,4 @@ npm run build
 
 ## IMPORTANT
 
-Generated files are stored in `build/` directory.
+Generated files are stored in `.next/` directory.
