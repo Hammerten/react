@@ -1,8 +1,6 @@
-# Covid-19 App
+# Covid-19 App (Next.js Version)
 
 Created for university class assignment.
-
-Demo: http://covid.hammerten.com
 
 # Installation
 
@@ -10,7 +8,7 @@ npm required
 
 ```
 git clone
-cd covid_app
+cd assignment-5
 npm install
 ```
 
@@ -19,7 +17,7 @@ npm install
 The website can run locally by calling:
 
 ```
-npm start
+npm run dev
 ```
 
 # Deployment
@@ -27,7 +25,7 @@ npm start
 Generate static build:
 
 ```
-npm react-scripts build
+npm run build
 ```
 
 ## IMPORTANT
