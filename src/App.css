@@ -1,0 +1,29 @@
+.login-container {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 500px;
+  padding: 3%;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.main-container {
+  padding: 30px 20px;
+}
+
+.post {
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.post-title {
+  margin-bottom: 30px;
+}
+
+.comment {
+  padding: 20px;
+}
